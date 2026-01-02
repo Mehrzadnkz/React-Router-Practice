@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom"; // اضافه کردن BrowserRouter
 import "./index.css";
-import Main_Content from "./routers/main-content";
+import App from "./routes";
+
+addEventListener("DOMContentLoaded", () => {
+  // Toggle_Theme call kept if needed (import if using)
+});
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter> {/* قرار دادن BrowserRouter */}
-      <Main_Content />
-    </BrowserRouter>
+    <App />
   </React.StrictMode>
 );

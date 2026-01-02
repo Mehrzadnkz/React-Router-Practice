@@ -1,11 +1,11 @@
 import axios from "axios";
 
-export function GetProducts() {
-    try {
-        axios.get('https://fakestoreapi.com/products')
-            .then(response => console.log(response));
-    } catch (error) {
-        console.log(error);
-    }
+export async function GetProducts() {
+    const response = await axios.get('https://fakestoreapi.com/products');
+    return response.data;
+}
 
+export async function GetProductById(id: string | number) {
+    const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
+    return response.data;
 }
